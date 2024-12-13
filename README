@@ -1,0 +1,135 @@
+/**********************************************************
+* Project 2: CalcYouLater 
+* CS 15
+* README
+*
+*********************************************************/
+
+Compile/run:
+ - Compile using
+ make CalcYouLater 
+ - run executable with
+ ./CalcYouLater < [command.cylc] 
+
+
+Program Purpose: the program is a user input dependent calculator 
+that runs of a stack. 
+
+Acknowledgements: I have receieved help from TAs.
+
+
+Files: 
+
+Main.cpp:
+ Used to create an instance of the calculator class that is useable 
+ for the user and runs it. 
+
+RPNCalc.cpp:
+ Implementation of the RPnCalc class. It includes the full functionality 
+ implementation of the RPN CalcYouLater. 
+
+RPNCalc.h: 
+ Header file for the RPNCalc class. 
+
+Parser. cpp: 
+ Implementation for the Parse function. 
+
+Parser.h
+ Header file for the parse function
+
+DatumStack.cpp 
+ Implementation for the datum stack that is used to store CalcYouLater 
+ data. 
+
+DatumStack.h 
+ Header file for the DatumStack. 
+
+Datum.o 
+ Datum object file for DatumStack and CalcYouLater. 
+
+Datum.h. 
+ Datum header file 
+
+Makefile: 
+ makefile for the whole program that compiles the whole CalcYouLater 
+ unit_test, and clean
+
+
+Note:  the program should handle all cases.
+
+Data Structures: 
+
+CalcYouLater is basically a query basses operation that takes in user 
+commands and does matching user operations. 
+
+The data of the whole project is consistent with a stack. The here objects 
+are stored in the stack data structure and the last put-in object will 
+be pulled out of the stack for user op and action. 
+
+The smallest data structure in this project is the datum class. That stores
+ its variable in either a single untether Boolean variable or a restring. 
+ The DatumStack is made consist of elements of datum.  The datum stack 
+ is the fundamental data structure the data ton calculator relies on to 
+ pull its data from. 
+
+The datum stack is organized by using the list package. It is a linked 
+list with private and public functions that allows it to operate according
+ to the philosophical ju of a stack. Where the user only has access to the 
+ latest added fariwhpeX or top of the stack. 
+
+
+Testing:
+
+Here describe the following: process of testing (unit tests), mention
+of bugs you encountered while testing, mention of testing on inputs of
+different sizes and edge cases, and good description of base cases you
+considered while testing. Demonstrate a methodical approach to
+testing.  This section of your REAMDE should be very thorough for
+assignments.
+
+I started the project by building the DatumStack class and I used unit tests 
+for testing. I test each function thoroughly from different cases. For regular
+ cases, there are one or more elements in the stack. To edge cases such as 
+ their behavior when called on an empty list etc to make sure nothing will 
+ be out of hound or will result in set fault. 
+
+I use unit tests to run the datum stack through a series of operations to
+ ensure that multiple tasks will result in correct results. 
+
+For the parser function, I also used the unit test with the istream to test 
+externally applied command files to ensure proper formatting. Things to 
+account for during this part of the testing was the formatting of the 
+return string including both brackets with spaces. No repeating brackets 
+as well as proper spacing according to user input. A nested r string is 
+also important. I tested for nested r string implementation as well as 
+spaced-out formatting input. 
+
+The calculator implementation is tested mainly by comparing output to the
+ reference function.  I compare all base functions with both user input 
+ as well as command files. To ensure the loops in my program are working 
+ properly. The factorial.cylc and fib. cylc are used to test proper 
+ program recursion. 
+
+One very hidden thing was the stack processing when an error occurs in 
+user formatting. That the program properly deletes the improper called 
+stack element. This was something that was ignored earlier on but after 
+thorough output and print comparison in the program, I ensured my stacks 
+were properly processed when a different error occurred. 
+
+The if function is thoroughly tested through all combinations of 
+improper formatting of all three datum elements on the stack. 
+
+The part that you found most difficult:
+The most difficult part for me was the implementation of m m, 
+
+The hardest part of this program is debugging. To check for reasoning 
+for different bugs is extremely hard because of how big the scope of 
+the program is. Since functions are layered into each other. 
+A lot of debugging is required to find the bug in the most surprising places. 
+To catch all of the bugs is then really hard and tedious. 
+The hidden functionality is also really hard to catch.  
+A lot of different segfault and runtime error was detected for
+ different functions for poping.
+
+
+Time Spent: 30 hours
